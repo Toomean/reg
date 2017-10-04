@@ -2,6 +2,33 @@
 <style lang="sass">
 @import "./style/main.sass"
 
+.Header
+    background: #eee
+
+.Nav
+    padding: 2em 1em
+
+    &__list
+        display: flex
+
+    &__link
+        transition: .2s border-color
+
+        margin: 0 1em
+        border-bottom: 1px solid
+
+        color: inherit
+        text-decoration: none
+
+        &:hover,
+        &_state_active
+            border-color: transparent
+
+        &_state_active
+            cursor: default
+
+
+
 </style>
 
 <template>
@@ -11,7 +38,7 @@
             <nav class="Nav">
                 <ul class="Nav__list">
                     <li class="Nav__item">
-                        <a class="Nav__link" href="#">Home</a>
+                        <a class="Nav__link Nav__link_state_active" href="#">Home</a>
                     </li>
                     <li class="Nav__item">
                         <a class="Nav__link" href="#">About</a>
@@ -23,10 +50,7 @@
             </nav>
         </header>
 
-        <main>
-            Main
-        </main>
-
+        <router-view></router-view>
     </div>
 </template>
 
