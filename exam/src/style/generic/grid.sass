@@ -1,0 +1,35 @@
+
+$grid_gutter: .5rem;
+$grid_screens: (lg: 75em, md: 64em, sm: 48em, xs: 30em)
+
+@mixin generate_grid($columns, $size: '')
+	@for $i from 1 through $columns
+		$width: 100% / ($columns / $i );
+
+		@if($size == '')
+			.\3#{$i}\/#{$columns} 
+				width: $width
+
+			.offset--#{$i} 
+				margin-left: $width
+		@else
+			.\3#{$i}\/#{$columns}--#{$size}
+				width: $width
+
+			.offset--#{$i}--#{$size} 
+				margin-left: $width
+
+.Grid
+	display: flex
+	flex-wrap: wrap
+
+	margin: 0 -$grid_gutter
+
+	&__box
+		padding: $grid_gutter
+
+@include generate-grid(12)
+
+@each $size, $value in $grid_screens
+	@include max-screen($value)
+		@include generate-grid(12, $size)
