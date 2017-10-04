@@ -1,12 +1,10 @@
 import Vue from 'vue';
-import VueRouter from 'vue-router'
 
 import App from './App.vue';
-
-Vue.use(VueRouter)
+import router from './router'
 
 const app = new Vue({
-
+	router,
     render(h) {
         return h(App);
     },

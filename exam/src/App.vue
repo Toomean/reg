@@ -27,8 +27,6 @@
         &_state_active
             cursor: default
 
-
-
 </style>
 
 <template>
