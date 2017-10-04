@@ -1,5 +1,6 @@
 
 <style lang="sass">
+@import "./style/main.sass"
 
 </style>
 
