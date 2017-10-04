@@ -2,6 +2,11 @@
 <style lang="sass">
 @import "./style/main.sass"
 
+.Content
+    max-width: 1024px
+    margin: 0 auto
+    padding: 1rem
+
 .Header
     background: #eee
 
@@ -48,7 +53,9 @@
             </nav>
         </header>
 
-        <router-view></router-view>
+        <main class="Content">
+            <router-view></router-view>
+        </main>
     </div>
 </template>
 
