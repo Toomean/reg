@@ -28,6 +28,11 @@ module.exports = {
             },
 
             {
+                test: /\.s[a|c]ss$/,
+                loader: 'style!css!sass'
+            },
+
+            {
                 test: /\.js$/,
                 exclude: /node_modules/,
                 use: 'babel-loader',
