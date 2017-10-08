@@ -36,7 +36,6 @@
 
 <template>
     <div class="Wrapper">
-
         <header class="Header">
             <nav class="Nav">
                 <ul class="Nav__list">
