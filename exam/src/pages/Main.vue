@@ -1,7 +1,7 @@
 
 <style lang="sass">
 
-.Tile
+.TileCell
     position: relative
     display: block
 
@@ -48,13 +48,13 @@
     <div class="Grid">
         <div class="Grid__cell" :class="[`Grid__cell_${tile.type}`]" v-for="tile in allTiles">
             <div class="Grid__box">
-                <router-link class="Tile"
+                <router-link class="TileCell"
                     :style="getRandomKitten()"
                     :to="{ name: 'TilePage', params: { id: tile.id } }"
                 >
-                    <div class="Tile__wrapper">
-                        <h2 class="Tile__title">{{ tile.title }}</h2>
-                        <p class="Tile__desc">{{ tile.description }}</p>
+                    <div class="TileCell__wrapper">
+                        <h2 class="TileCell__title">{{ tile.title }}</h2>
+                        <p class="TileCell__desc">{{ tile.description }}</p>
                     </div>
                 </router-link>
             </div>
