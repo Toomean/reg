@@ -40,13 +40,11 @@
             <nav class="Nav">
                 <ul class="Nav__list">
                     <li class="Nav__item">
-                        <a class="Nav__link Nav__link_state_active" href="#">Home</a>
-                    </li>
-                    <li class="Nav__item">
-                        <a class="Nav__link" href="#">About</a>
-                    </li>
-                    <li class="Nav__item">
-                        <a class="Nav__link" href="#">Whatever</a>
+                        <router-link class="Nav__link"
+                            :to="{ name: 'MainPage' }"
+                            :active-class="'Nav__link_state_active'"
+                            :exact="true"
+                        >Home</router-link>
                     </li>
                 </ul>
             </nav>
